@@ -205,6 +205,15 @@
     </style>
 </head>
 <body>
+    <script>
+    (function() {
+        // Verifica se o usuário está logado (presença de sessionStorage)
+        if (!sessionStorage.getItem('usuarioLogado')) {
+            // Redireciona para a página de login
+            window.location.href = 'login.html';
+        }
+    })();
+</script>
     <!-- Header com animação de entrada -->
 <header class="header animate-on-load fade-slide-up">
     <div class="logo">GDK<span class="logo-dot">.</span></div>
